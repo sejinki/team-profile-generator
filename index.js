@@ -1,4 +1,4 @@
-const inquirer = import 'inquirer'
+const inquirer = import ("inquirer")
 const fs = requirer("fs")
 const path = require("path")
 
