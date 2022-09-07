@@ -1,4 +1,4 @@
-const inquirer = require('inquirer')
+const inquirer = import 'inquirer'
 const fs = requirer("fs")
 const path = require("path")
 
@@ -85,8 +85,8 @@ let internQuestions = [
 ]
 
 function start_app(){
-    managerQuestions.then(function()){
-        
-    }
+    inquirer.prompt(managerQuestions).then(data => {
+        console.log(data)
+    })
 }
 start_app()
