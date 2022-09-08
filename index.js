@@ -1,6 +1,7 @@
-const inquirer = require ("inquirer")
-const fs = require("fs")
-const path = require("path")
+const inquirer = require ("inquirer");
+const fs = require("fs");
+const path = require("path");
+const userInput = [];
 
 let managerQuestions = [
     {
@@ -29,6 +30,15 @@ let managerQuestions = [
     },
 ]
 
+let menuOne = [
+    {
+    type: "input",
+    name: "addEngineer",
+    message: "What is the next step you want to take?",
+    Choices: ["add engineer", "add intern", "finish building my team"]
+    },
+]
+
 let engineerQuestions = [
         {
             type: "input",
@@ -54,6 +64,7 @@ let engineerQuestions = [
             message: "What is the engineer's github username?",
     
         },
+
 
 ]
 
@@ -87,6 +98,27 @@ let internQuestions = [
 function start_app(){
     inquirer.prompt(managerQuestions).then(data => {
         console.log(data)
+        // do something with the data
+        returnMenu()
+    })
+}
+function returnMenu(){
+    inquirer.prompt(menuOne).then(data => {
+        console.log(data)
     })
 }
 start_app()
+
+// Logic chain
+// Start with manager questions
+// do something with the user answers
+// Menu --> ask if they want to enter an engineer, intern or be done
+// Engineer? Ask engineer questions, do something with those answers then go back to the menu
+// Intern? Same as engineer
+// Done? Take the user generated list and write the file
+
+// Example
+// user inputs manager questions
+// let manager = new Manager(data.name, data.id, data.email, data.officeNumber)
+// manager {name: 'bob', id: '23', email: 'bob@mail.com', office: '2105551313'}
+// push that manager into the team array (userInput) and move on to the next thing
