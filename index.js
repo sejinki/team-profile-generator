@@ -6,25 +6,25 @@ let managerQuestions = [
     {
         type: "input",
         name: "managerName",
-        message: "What is the name of the manager",
+        message: "What is the name of the manager?",
 
     },
     {
         type: "input",
         name: "employeeID",
-        message: "What is the name of the manager",
+        message: "What is the employee ID?",
 
     },
     {
         type: "input",
         name: "emailAddress",
-        message: "What is the name of the manager",
+        message: "What is the manager's email address?",
 
     },
     {
         type: "input",
         name: "officeNumber",
-        message: "What is the name of the manager",
+        message: "What is the manager's office number?",
 
     },
 ]
