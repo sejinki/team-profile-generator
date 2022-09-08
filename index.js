@@ -1,5 +1,5 @@
 const inquirer = import ("inquirer")
-const fs = requirer("fs")
+const fs = require("fs")
 const path = require("path")
 
 let managerQuestions = [
