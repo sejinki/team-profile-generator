@@ -29,17 +29,17 @@ let managerQuestions = [
     },
 ]
 
-let employeeQuestions = [
+let engineerQuestions = [
         {
             type: "input",
             name: "employeeName",
-            message: "What is the name of the employee",
+            message: "What is the name of the employee?",
     
         },
         {
             type: "input",
             name: "employeeID",
-            message: "What is the name of the manager",
+            message: "What is the name of",
     
         },
         {
