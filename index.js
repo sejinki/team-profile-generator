@@ -32,26 +32,26 @@ let managerQuestions = [
 let engineerQuestions = [
         {
             type: "input",
-            name: "employeeName",
-            message: "What is the name of the employee?",
+            name: "engineerName",
+            message: "What is the name of the engineer?",
     
         },
         {
             type: "input",
             name: "employeeID",
-            message: "What is the name of",
+            message: "What is the engineer's employee ID?",
     
         },
         {
             type: "input",
             name: "emailAdress",
-            message: "What is the name of the manager",
+            message: "What is the engineer's email address?",
     
         },
         {
             type: "input",
-            name: "officeNumber",
-            message: "What is the name of the manager",
+            name: "gitHubUsername",
+            message: "What is the engineer's github username?",
     
         },
 
@@ -67,19 +67,19 @@ let internQuestions = [
     {
         type: "input",
         name: "internID",
-        message: "What is the name of the",
+        message: "What is the intern's ID?",
 
     },
     {
         type: "input",
         name: "internEmail",
-        message: "What is the name of the manager",
+        message: "What is the intern's email address?",
 
     },
     {
         type: "input",
         name: "internSchool",
-        message: "What is the name of the manager",
+        message: "What is the name of the intern's school",
 
     },
 ]
