@@ -18,6 +18,10 @@ test("testing employee object with email", () => {
     expect(employee.email).toBe('this@email.com');
 })
 test("testing employee getName", () => {
-    const employee= new Employee("sejin");
+    const employee = new Employee("sejin");
     expect(employee.getName()).toBe('sejin');
+})
+test("testing employee getEmail", () => {
+    const employee = new Employee('sejin', 'this@email.com');
+    expect(employee.getEmail()).toBe('this@email.com');
 })
