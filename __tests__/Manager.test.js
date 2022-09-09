@@ -1,4 +1,4 @@
-const Engineer = require("../lib/Manager");
+const Manager = require("../lib/Manager");
 
 test("testing manager officeNumber", () => {
     const manager = new Manager();
