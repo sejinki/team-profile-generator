@@ -19,5 +19,5 @@ test("testing employee object with email", () => {
 })
 test("testing employee getName", () => {
     const employee= new Employee("sejin");
-    expect(employee.getName()).toBe(sejin)
+    expect(employee.getName()).toBe('sejin');
 })
