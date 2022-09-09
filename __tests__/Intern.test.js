@@ -10,7 +10,12 @@ test("testing intern school", () => {
     expect(intern.school).toBe('school name');
 })
 
-test("testing manger role", () => {
+test("testing getSchool", () => {
+    const intern = new Intern()
+    expect(intern.getSchool()).toBe("role");
+})
+
+test("testing intern role", () => {
     const intern = new Intern()
     expect(intern.getRole()).toBe("role");
 })
