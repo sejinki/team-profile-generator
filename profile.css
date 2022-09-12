@@ -10,5 +10,13 @@ header {
   }
 
   .container {
-    
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    background: gray;
+    width: 200px;
+    height: 250px;
+    margin: 10px;
   }
