@@ -33,7 +33,7 @@ let managerQuestions = [
 let menuOne = [
     {
     type: "input",
-    name: "addEngineer",
+    name: "menu",
     message: "What is the next step you want to take?",
     Choices: ["add engineer", "add intern", "finish building my team"]
     },
