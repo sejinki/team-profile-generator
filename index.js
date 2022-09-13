@@ -3,6 +3,9 @@ const fs = require("fs");
 const path = require("path");
 const userInput = [];
 
+// const generateHTML = ({ }) =>
+
+
 let managerQuestions = [
     {
         type: "input",
