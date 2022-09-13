@@ -32,10 +32,10 @@ let managerQuestions = [
 
 let menuOne = [
     {
-    type: "input",
+    type: "list",
     name: "menu",
     message: "What is the next step you want to take?",
-    Choices: ["add engineer", "add intern", "finish building my team"]
+    choices: ["add engineer", "add intern", "finish building my team"]
     },
 ]
 
@@ -105,8 +105,29 @@ function start_app(){
 function returnMenu(){
     inquirer.prompt(menuOne).then(data => {
         console.log(data)
+    }).then((userAnswers) => {
+        switch(userAnswers.menu){
+            case "add engineer":
+            addEngineer()
+            case "add intern":
+            addIntern()
+            case "finishing building my team":
+        }
     })
 }
+
+function addEngineer(){
+    inquirer.prompt(engineerQuestions).then(data => {
+        console.log(data)
+    })
+}
+
+function addIntern(){
+    inquirer.prompt(internQuestions).then(data => {
+        console.log(data)
+    })
+}
+
 start_app()
 
 // Logic chain
