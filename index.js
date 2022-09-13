@@ -106,16 +106,16 @@ function start_app(){
     })
 }
 function returnMenu(){
+    console.log(returnMenu)
     inquirer.prompt(menuOne).then(data => {
-        console.log(data)
+        console.log(data, "menuOne")
     }).then((userAnswers) => {
-        console.log(userAnswers, "userAnswers")
         switch(userAnswers.menu){
             case "add engineer":
             addEngineer()
             case "add intern":
             addIntern()
-            case "finishing building my team":
+            case "finish building my team":
         }
     })
 }
