@@ -109,6 +109,7 @@ function returnMenu(){
     inquirer.prompt(menuOne).then(data => {
         console.log(data)
     }).then((userAnswers) => {
+        console.log(userAnswers, "userAnswers")
         switch(userAnswers.menu){
             case "add engineer":
             addEngineer()
@@ -130,7 +131,6 @@ function addIntern(){
         console.log(data)
     })
 }
-function 
 
 start_app()
 
