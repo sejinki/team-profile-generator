@@ -1,18 +1,24 @@
 module.exports = {
     teamGeneratorProfile: theTeam => {
         // const generatedTeamProfiles = [];
-        theTeam.forEach(employee => {
-            console.log(employee)
+        /*
+
+        const generateTeamProfiles = theTeam.map(employee => {
+            //Switch case here, returning the profile functions
+        })
+        */
+        const generatedTeamPorfiles = theTeam.map(employee => {
+            console.log(employee);
             switch(employee.employeeType){
                 case 'manager':
-                    managerProfile(employee)
+                    return managerProfile(employee) 
                     // generatedTeamProfiles.push(managerProfile(employee))
                     break
                 case 'engineer':
-                    engineerProfile(employee)
+                    return engineerProfile(employee)
                     break
                 case 'intern':
-                    internProfile(employee)
+                    return internProfile(employee)
                     break
             }
         })
@@ -48,7 +54,7 @@ let engineerProfile = engineer => {
         <li class = "list-group-item">Github User:${engineer.github}</li>
         </div>
         </section>`
-    generatedTeamProfiles.push(engineerInfo)
+    return engineerInfo
 }
 
 let internProfile = intern => {
@@ -63,5 +69,5 @@ let internProfile = intern => {
         <li class = "list-group-item">School:${intern.school}</li>
         </div>
         </section>`
-    generatedTeamProfiles.push(internInfo)
+    return internProfile
 }
