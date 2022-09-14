@@ -142,7 +142,34 @@ function addIntern(){
 }
 
 function createHTML(){
-    profileMethods.teamGeneratorProfile(employeesInfo)
+    const profileHTML = profileMethods.teamGeneratorProfile(employeesInfo);
+    const pageHTML = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./profile.css">
+        <title>My Team</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/78a2821f83.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <h2>Team Profile</h2>
+        </header>
+    
+        <div class = "team justify-content-center d-flex flex-wrap" style = "margin-top: 70px; gap: 10px;">
+    
+        ${profileHTML}
+    
+        </div>
+        
+    </body>
+    </html>`;
+    fs.writeFile('index.html', pageHTML, (err) =>
+      err ? console.log(err) : console.log('Successfully created index.html!')
+    );
 }
 
 start_app()

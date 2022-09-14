@@ -21,7 +21,8 @@ module.exports = {
                     return internProfile(employee)
                     break
             }
-        })
+        }).join("\n");
+        return generatedTeamPorfiles;
     }
 }
 
