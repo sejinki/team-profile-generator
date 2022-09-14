@@ -1,7 +1,8 @@
 const inquirer = require ("inquirer");
 const fs = require("fs");
 const path = require("path");
-const userInput = [];
+const employeesInfo = [];
+const profileMethods = require('./src/profile.js')
 
 // const generateHTML = ({ }) =>
 
@@ -63,7 +64,7 @@ let engineerQuestions = [
         },
         {
             type: "input",
-            name: "gitHubUsername",
+            name: "github",
             message: "What is the engineer's github username?",
     
         },
@@ -75,7 +76,7 @@ let internQuestions = [
     {
         type: "input",
         name: "internName",
-        message: "What is the name of the intern",
+        message: "What is the name of the intern?",
 
     },
     {
@@ -93,14 +94,15 @@ let internQuestions = [
     {
         type: "input",
         name: "internSchool",
-        message: "What is the name of the intern's school",
+        message: "What is the name of the intern's school?",
 
     },
 ]
 
 function start_app(){
     inquirer.prompt(managerQuestions).then(data => {
-        console.log(data)
+        data.employeeType = 'manager'
+        employeesInfo.push(data)
         // do something with the data
         returnMenu()
     })
@@ -108,28 +110,39 @@ function start_app(){
 function returnMenu(){
     console.log(returnMenu)
     inquirer.prompt(menuOne).then(data => {
-        console.log(data, "menuOne")
-    }).then((userAnswers) => {
-        switch(userAnswers.menu){
+        switch(data.menu){
             case "add engineer":
-            addEngineer()
+                addEngineer()
+                break
             case "add intern":
-            addIntern()
+                addIntern()
+                break
             case "finish building my team":
+                console.log(employeesInfo)
+                createHTML()
+                break
         }
     })
 }
 
 function addEngineer(){
     inquirer.prompt(engineerQuestions).then(data => {
-        console.log(data)
+        data.employeeType = 'engineer'
+        employeesInfo.push(data)
+        returnMenu()
     })
 }
 
 function addIntern(){
     inquirer.prompt(internQuestions).then(data => {
-        console.log(data)
+        data.employeeType = 'intern'
+        employeesInfo.push(data)
+        returnMenu()
     })
+}
+
+function createHTML(){
+    profileMethods.teamGeneratorProfile(employeesInfo)
 }
 
 start_app()
